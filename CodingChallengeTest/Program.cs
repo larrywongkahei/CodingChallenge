@@ -37,9 +37,37 @@
         }
         return listToReturn.ToArray();
     }
+
+    public static string printNumbersOfArraysInArray(int[][] array)
+    {
+        string stringToReturn = "[";
+        for(var i = 0; i < array.Count(); i++)
+        {
+            stringToReturn += "[";
+            for(var x = 0; x < array[i].Count(); x++)
+            {
+                if (x + 1< array[i].Count())
+                {
+                    stringToReturn += $"{array[i][x]}, ";
+                }
+                else
+                {
+                    stringToReturn += $"{array[i][x]}]";
+                }
+            }
+            if (i + 1 != array.Count())
+            {
+                stringToReturn += ", ";
+            }
+        }
+        stringToReturn += "]";
+        return stringToReturn;
+    }
+
     public static void Main(string[] args)
     {
         int[] arrayToTest = new int[] { 1, 2, 3, 4, 5 };
         int[][] newArray = groupArrayElements(arrayToTest, 3);
+        Console.WriteLine(printNumbersOfArraysInArray(newArray));
     }
 }
