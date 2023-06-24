@@ -17,7 +17,7 @@
             //Initialize an array with the number of in needed in the array
             //If arrayOfNumbers.Count() - countLoop > eachArrayCount means that its now the final pary of the array, then initialize with equally devided number
             //If arrayOfNumbers.Count() - countLoop is smaller than eachArrayCount, then initialize it with the number or remainder
-            int[] arrayToAdd = arrayOfNumbers.Count() - countLoop > eachArrayCount ? new int[eachArrayCount] : new int[eachArrayCount - countLoop];
+            int[] arrayToAdd = arrayOfNumbers.Count() - countLoop > eachArrayCount ? new int[eachArrayCount] : new int[arrayOfNumbers.Count() - countLoop];
 
             //This loop is for adding in into the arrayToAdd array, it loops the eachArrayCount length of time as required
             for (var x = 0; x < eachArrayCount; x++)
@@ -37,9 +37,9 @@
         }
         return listToReturn.ToArray();
     }
-    public static int Main(string[] args)
+    public static void Main(string[] args)
     {
-
-        return 0;
+        int[] arrayToTest = new int[] { 1, 2, 3, 4, 5 };
+        int[][] newArray = groupArrayElements(arrayToTest, 3);
     }
 }
