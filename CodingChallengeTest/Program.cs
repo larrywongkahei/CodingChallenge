@@ -1,3 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿public class CodingChallenge
+{
+    public static int[][] groupArrayElements(int[] arrayOfNumbers, int number)
+    {
 
+    }
+}
